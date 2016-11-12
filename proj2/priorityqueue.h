@@ -12,7 +12,6 @@ public:
   void swapDown(int* heap, int i, int size);
   void heapify(int* heap, int size);
   pnode deleteMin(void);
-  void insert(char ch, int freq);
   bool isEmpty();
 
 private:

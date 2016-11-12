@@ -7,8 +7,8 @@ PQueue::PQueue(int freq[256]) {
   for(int i = 0; i < 256; i++) {
     if(freq[i] != 0) {
       pnode newNode;
-      pnode.ch = (char) i;
-      pnode.freq = freq[i];
+      newNode.ch = (char) i;
+      newNode.freq = freq[i];
       heap.push_back(newNode);
     }
   }
@@ -37,7 +37,14 @@ void PQueue::heapify(std::vector<pnode> heap, size_t size) {
 }
 
 pnode PQueue::deleteMin() {
-    // TODO
+    if(!heap.empty()) {
+      pnode minNode;
+      minNode.ch = heap.back().ch;
+      minNode.freq = heap.back().freq;
+      heap.pop_back();
+      return minNode;
+    }
+    return NULL;
 }
 
 bool PQueue::isEmpty() {
