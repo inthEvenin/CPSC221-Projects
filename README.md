@@ -13,4 +13,6 @@ Finished date: Oct. 16th 2016
 ## Project #2
 Implementing Huffman algorithm with heap priority queue data structure.
 
-Currently work in progress.
+Finished date: Nov. 13th 2016
+
+Uploading codes after assigned due date (Nov. 14th 2016)
