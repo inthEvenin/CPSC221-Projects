@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <algorithm>
+#include <vector>
 #include "codetree.h"
 
 // Print the Huffman code tree and list of codes for a given text file.
@@ -27,10 +27,10 @@ int main( int argc, char *argv[] ) {
     fin.close();
   }
 
-  CodeTree ct = CodeTree( freq );
-
-  ct.printTree();
-  ct.printCode();
+  std::vector<ctNode>* heap = new std::vector<ctNode>;
+  codetree* ct = new codetree(freq, heap);
+  ct->printTree();
+  ct->printCode();
 
   return 0;
 }

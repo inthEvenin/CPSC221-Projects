@@ -1,24 +1,25 @@
-#include <iostream>
-#include <string>
-#include "priorityqueue.h"
+#ifndef CODETREE_H
+#define CODETREE_H
 
 struct ctNode {
-  std::string str;
+  int ch;
   int freq;
   ctNode* left;
   ctNode* right;
-}
+};
 
 class codetree {
 public:
-  codetree(void);
-  ctNode* find(char ch);
-  void insert(char ch);
+  codetree(int freq[256], std::vector<ctNode>* heap);
+  ctNode* makeCodeTree(int freq[256], std::vector<ctNode>* heap);
   void printChar(int ch);
+  void printTreeHelper(ctNode* root, std::string pre);
   void printTree(void);
-  void printTreeHelper(ctNode* r, std::string pre);
+  void printCodeHelper(ctNode* root, std::string pre);
+  void printCode(void);
 
 private:
   ctNode* root;
-  PQueue* pQueue;
-}
+};
+
+#endif

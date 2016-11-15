@@ -1,19 +1,15 @@
-#include <vector>
-#include <algorithm>
-
-struct pnode {
-  char ch;
-  int freq;
-}
+#ifndef PHEAP_H
+#define PHEAP_H
 
 class PQueue {
 public:
-  PQueue(int freq[256]);
-  void swapDown(int* heap, int i, int size);
-  void heapify(int* heap, int size);
-  pnode deleteMin(void);
-  bool isEmpty();
+  PQueue(std::vector<ctNode>* heap, int freq[256]);
+  void swapDown(std::vector<ctNode>* heap, int i, int size);
+  void heapify(std::vector<ctNode>* heap, int size);
+  void removeMin(std::vector<ctNode>* heap, ctNode minNode);
+  ctNode deleteMin(std::vector<ctNode>* heap);
+  void insertNode(std::vector<ctNode>* heap, ctNode* newNode);
+  bool isEmpty(std::vector<ctNode>* heap);
+};
 
-private:
-  std::vector<pnode> heap;
-}
+#endif
