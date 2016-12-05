@@ -14,3 +14,8 @@ Finished date: Oct. 6th 2016 (Milestone #1), Oct. 14th 2016 (Milestone #2)
 Implementing Huffman algorithm with max-heap priority queue data structure.
 
 Finished date: Nov. 13th 2016
+
+## Project #3
+Implementing several generators to identify mystery dictionary data structures.
+
+Finished date: Dec. 1st 2016
